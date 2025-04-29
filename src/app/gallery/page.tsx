@@ -1,8 +1,12 @@
+import { HouseBody } from "../_components/HouseBody";
+
 export default function Gallery() {
   return (
-    <div>
-      GalleryGalleryGalleryGalleryGalleryGalleryGalleryGalleryGalleryGallery
-      GalleryGalleryGalleryGalleryGalleryGalleryGalleryGalleryGalleryGallery
-    </div>
+    <HouseBody>
+      <div>
+        GalleryGalleryGalleryGalleryGalleryGalleryGalleryGalleryGalleryGallery
+        GalleryGalleryGalleryGalleryGalleryGalleryGalleryGalleryGalleryGallery
+      </div>
+    </HouseBody>
   );
 }
