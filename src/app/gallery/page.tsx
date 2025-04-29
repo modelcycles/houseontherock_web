@@ -1,4 +1,4 @@
-function Gallery() {
+export default function Gallery() {
   return (
     <div>
       GalleryGalleryGalleryGalleryGalleryGalleryGalleryGalleryGalleryGallery
@@ -6,5 +6,3 @@ function Gallery() {
     </div>
   );
 }
-
-export { Gallery };

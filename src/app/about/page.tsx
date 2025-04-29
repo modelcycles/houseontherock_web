@@ -1,4 +1,4 @@
-function AboutUs() {
+export default function AboutUs() {
   return (
     <div>
       하우스온더락은 마태복음 7장 16절 말씀을 기반으로 출발한 1인 출판사입니다.
@@ -8,5 +8,3 @@ function AboutUs() {
     </div>
   );
 }
-
-export { AboutUs };
