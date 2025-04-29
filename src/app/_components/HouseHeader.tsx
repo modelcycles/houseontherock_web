@@ -3,8 +3,22 @@ import Link from "next/link";
 export function HouseHeader() {
   return (
     <>
-      <div style={{ height: "10vh", background: "#8db4ad", color: "black" }}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{
+          height: "10vh",
+          background: "#8db4ad",
+          color: "black",
+          alignContent: "center",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            paddingLeft: 100,
+            paddingRight: 100,
+          }}
+        >
           <Link href={"/"} prefetch={false}>
             <div>House on the Rock</div>
           </Link>
