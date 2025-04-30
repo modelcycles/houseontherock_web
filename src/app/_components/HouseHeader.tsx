@@ -15,8 +15,8 @@ export function HouseHeader() {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            paddingLeft: 100,
-            paddingRight: 100,
+            paddingLeft: 20,
+            paddingRight: 20,
           }}
         >
           <Link href={"/"} prefetch={false}>
