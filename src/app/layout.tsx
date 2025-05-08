@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "House On The Rock Press",
   description: "Photo book publisher for God",
-  icons: { icon: "/hotr.svg" },
+  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({
