@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./css/globals.css";
 import { HouseHeader } from "./_components/HouseHeader";
 import { HouseFooter } from "./_components/HouseFooter";
 import Head from "next/head";
@@ -32,9 +32,17 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <HouseHeader />
-        {children}
-        <HouseFooter />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            minHeight: "100vh",
+          }}
+        >
+          <HouseHeader />
+          {children}
+          <HouseFooter />
+        </div>
       </body>
     </html>
   );
