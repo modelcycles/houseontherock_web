@@ -14,11 +14,16 @@ export function HouseBody({ children, background, text_color }: Props) {
       <div
         style={{
           height: "90vh",
+          padding: "20px",
+          justifyContent: "space-evenly",
+          display: "flex",
           background: background ?? "#dfd3c3",
           color: text_color ?? "black",
         }}
       >
+        <div></div>
         {children}
+        <div></div>
       </div>
     </>
   );

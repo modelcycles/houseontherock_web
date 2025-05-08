@@ -1,0 +1,21 @@
+.menu-button {
+  margin-right: 20px;
+  align-content: center;
+  font-size: 24px;
+}
+
+.home-button {
+  align-content: center;
+  font-size: 24px;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/fonts/FuturaCyrillicBook.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-config {
+  font-family: "Futura PT";
+}
