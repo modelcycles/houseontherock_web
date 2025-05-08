@@ -13,10 +13,11 @@ export function HouseBody({ children, background, text_color }: Props) {
     <>
       <div
         style={{
-          height: "90vh",
+          // height: "100vh",
           padding: "20px",
           justifyContent: "space-evenly",
           display: "flex",
+          flex: 1,
           background: background ?? "#dfd3c3",
           color: text_color ?? "black",
         }}

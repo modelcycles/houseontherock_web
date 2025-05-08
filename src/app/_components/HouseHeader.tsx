@@ -2,7 +2,8 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import "./css/HeaderStyle.css";
+import "../css/HeaderStyle.css";
+
 export function HouseHeader() {
   const isPC = useMediaQuery({
     query: "(min-width:1951px)",
