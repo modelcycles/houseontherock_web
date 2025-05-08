@@ -13,8 +13,8 @@ export function HouseBody({ children, background, text_color }: Props) {
     <>
       <div
         style={{
-          height: "80vh",
-          background: background ?? "#ecae7d",
+          height: "90vh",
+          background: background ?? "#dfd3c3",
           color: text_color ?? "black",
         }}
       >

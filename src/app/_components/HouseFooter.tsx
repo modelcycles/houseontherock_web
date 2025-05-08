@@ -1,7 +1,7 @@
 export function HouseFooter() {
   return (
     <>
-      <div style={{ height: "10vh", background: "#026c80", color: "white" }}>
+      <div style={{ height: "5vh", background: "#dfd3c3", color: "black" }}>
         <div>Instagram : yongcheol_c</div>
         <div>e-mail : houseontherock2025@gmail.com</div>
       </div>

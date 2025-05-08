@@ -5,8 +5,9 @@ export function HouseHeader() {
     <>
       <div
         style={{
-          height: "10vh",
-          background: "#8db4ad",
+          height: "5vh",
+          background: "#dfd3c3",
+          borderBottom: "1px solid black",
           color: "black",
           alignContent: "center",
         }}
@@ -19,18 +20,38 @@ export function HouseHeader() {
             paddingRight: 20,
           }}
         >
-          <Link href={"/"} prefetch={false}>
-            <div>House on the Rock</div>
-          </Link>
-          <Link href={"/publications"} prefetch={false}>
-            <div>Published Books</div>
-          </Link>
-          <Link href={"/about"} prefetch={false}>
-            <div>About Us</div>
-          </Link>
-          <Link href={"/gallery"} prefetch={false}>
-            <div>Gallery</div>
-          </Link>
+          <div>
+            <Link href={"/"} prefetch={false}>
+              <div
+                style={{ fontSize: 30, height: "5vh", alignContent: "center" }}
+              >
+                House on the Rock
+              </div>
+            </Link>
+          </div>
+          <div style={{ display: "flex", height: "5vh" }}>
+            <Link
+              href={"/publications"}
+              prefetch={false}
+              style={{ marginRight: 20, alignContent: "center" }}
+            >
+              <div>Published Books</div>
+            </Link>
+            <Link
+              href={"/about"}
+              prefetch={false}
+              style={{ marginRight: 20, alignContent: "center" }}
+            >
+              <div>About Us</div>
+            </Link>
+            <Link
+              href={"/gallery"}
+              prefetch={false}
+              style={{ marginRight: 20, alignContent: "center" }}
+            >
+              <div>Gallery</div>
+            </Link>
+          </div>
         </div>
       </div>
     </>
