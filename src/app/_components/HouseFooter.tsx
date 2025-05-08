@@ -1,6 +1,5 @@
 import { BiLogoGmail } from "react-icons/bi";
 import { FaInstagram } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
 
 export function HouseFooter() {
   return (
