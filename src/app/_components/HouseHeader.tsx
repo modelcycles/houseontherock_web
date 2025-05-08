@@ -3,6 +3,10 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import "../css/HeaderStyle.css";
+import { IoClose, IoMenu } from "react-icons/io5";
+import { SlMenu } from "react-icons/sl";
+import { TfiMenu } from "react-icons/tfi";
+import { TiThMenu } from "react-icons/ti";
 
 export function HouseHeader() {
   const isPC = useMediaQuery({
@@ -33,6 +37,7 @@ export function HouseHeader() {
           alignContent: "center",
         }}
       >
+        {/* 가나다라 */}
         {/* <div
           style={{
             display: "flex",
@@ -164,6 +169,9 @@ function TabletHeader() {
   );
 }
 function MobileHeader() {
+  const [showDialog, setShowDialog] = useState(false);
+  // const [isMenubutton, setMenubutton] = useState(true);
+  // console.log("isMenubutton", isMenubutton);
   return (
     <>
       <div
@@ -178,6 +186,112 @@ function MobileHeader() {
           <Link className="home-button font-config" href={"/"} prefetch={false}>
             <div>HOUSE ON THE ROCK</div>
           </Link>
+        </div>
+        <div>
+          <button
+            onClick={() => {
+              setShowDialog(true);
+              // setMenubutton(false);
+            }}
+            style={{
+              background: "none",
+              border: "none",
+              // fontSize: 20,
+              cursor: "pointer",
+              color: "black",
+              backgroundColor: "#dfd3c3",
+            }}
+          >
+            <div style={{ fontSize: 24 }}>☰</div>
+            {/* {isMenubutton ? (
+              <div style={{ fontSize: 24 }}>☰</div>
+            ) : (
+              <IoClose
+                style={{ color: "black" }}
+                size={24}
+                onClick={() => {
+                  setShowDialog(false);
+                  setMenubutton(true);
+                }}
+              />
+            )} */}
+          </button>
+          {showDialog && (
+            <div
+              style={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                backgroundColor: "rgba(0, 0, 0, 0.3)",
+                backdropFilter: "blur(5px)",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                zIndex: 1000,
+              }}
+            >
+              <div
+                style={{
+                  background: "white",
+                  padding: 40,
+                  // marginTop: 20,
+                  borderRadius: 10,
+                  textAlign: "center",
+                }}
+              >
+                <div>
+                  <Link
+                    className="menu-button font-config"
+                    href={"/publications"}
+                    prefetch={false}
+                    onClick={() => setShowDialog(false)}
+                  >
+                    <div>Published Books</div>
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    className="menu-button font-config"
+                    href={"/about"}
+                    prefetch={false}
+                    onClick={() => setShowDialog(false)}
+                  >
+                    <div>About Us</div>
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    className="menu-button font-config"
+                    href={"/gallery"}
+                    prefetch={false}
+                    onClick={() => setShowDialog(false)}
+                  >
+                    <div>Gallery</div>
+                  </Link>
+                </div>
+                <button
+                  onClick={() => {
+                    setShowDialog(false);
+                    // setMenubutton(true);
+                  }}
+                  style={{
+                    marginTop: 10,
+                    // width: "10px",
+                    // height: "10px",
+                    padding: 10,
+                    background: "white",
+                    border: "none",
+                    borderRadius: 5,
+                    cursor: "pointer",
+                  }}
+                >
+                  <IoClose style={{ color: "black" }} size={24} />
+                </button>
+              </div>
+            </div>
+          )}
         </div>
         {/* <div style={{ display: "flex" }}>
           <Link
