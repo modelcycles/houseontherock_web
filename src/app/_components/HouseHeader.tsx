@@ -27,7 +27,7 @@ export function HouseHeader() {
     <>
       <div
         style={{
-          height: "100px",
+          height: "80px",
           background: "#dfd3c3",
           borderBottom: "1px solid black",
           color: "black",
@@ -130,7 +130,7 @@ function TabletHeader() {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          paddingLeft: 20,
+          paddingLeft: 30,
           paddingRight: 20,
         }}
       >
@@ -191,7 +191,7 @@ function MobileHeader() {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          paddingLeft: 20,
+          paddingLeft: 30,
           paddingRight: 20,
           zIndex: 1,
         }}
