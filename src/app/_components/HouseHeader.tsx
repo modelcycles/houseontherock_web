@@ -294,7 +294,10 @@ function MobileHeader() {
                   cursor: "pointer",
                 }}
               >
-                <IoClose style={{ color: "black" }} size={24} />
+                <IoClose
+                  style={{ color: showDialog ? "black" : "transparent" }}
+                  size={24}
+                />
               </button>
             </div>
           </BlurringBackground>
