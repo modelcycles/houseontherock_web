@@ -135,7 +135,6 @@ function PcHeader() {
 }
 
 function TabletHeader() {
-  const [mouseHover, setMouseHover] = useState(false);
   return (
     <>
       <div
