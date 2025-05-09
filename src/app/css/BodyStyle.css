@@ -1,0 +1,13 @@
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px); /* 아래에서 시작 */
+  transition: opacity 0.5s ease; /* opacity와 transform에 대한 transition 설정 */
+  animation: fadeInUp 0.8s ease forwards; /* 0.5초 동안 애니메이션 실행 */
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* 원래 위치로 이동 */
+  }
+}

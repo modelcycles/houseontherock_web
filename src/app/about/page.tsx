@@ -4,7 +4,7 @@ export default function AboutUs() {
   return (
     <HouseBody>
       <div className="main-text-korean">
-        <p style={{ marginBottom: 20 }}>
+        <p style={{ marginTop: "50px", marginBottom: 20 }}>
           하우스온더락은 마태복음 7장 25절 말씀을 기반으로 출발한 1인
           출판사입니다.
         </p>

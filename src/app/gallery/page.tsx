@@ -5,9 +5,14 @@ export default function Gallery() {
   return (
     <HouseBody>
       <div className="main-text-english">
-        <p>
-          GalleryGalleryGalleryGalleryGalleryGalleryGalleryGalleryGalleryGallery
-          GalleryGalleryGalleryGalleryGalleryGalleryGalleryGalleryGalleryGallery
+        <p style={{ marginTop: "50px", marginBottom: "5px" }}>
+          GalleryGalleryGalleryGalleryGalleryGalleryGalleryGallery
+        </p>
+        <p style={{ marginBottom: "5px" }}>
+          GalleryGalleryGalleryGalleryGalleryGalleryGalleryGallery
+        </p>
+        <p style={{ marginBottom: "5px" }}>
+          GalleryGalleryGalleryGalleryGalleryGalleryGalleryGallery
         </p>
       </div>
     </HouseBody>

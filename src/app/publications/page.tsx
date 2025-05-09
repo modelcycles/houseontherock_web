@@ -5,7 +5,7 @@ export default function PublishedBooks() {
   return (
     <HouseBody>
       <div className="main-text-english">
-        <p>
+        <p style={{ marginTop: "50px", marginBottom: "5px" }}>
           Two Of A Kind Two Of A Kind Two Of A Kind Two Of A Kind Two Of A Kind
           Two Of A Kind Two Of A Kind Two Of A Kind Two Of A Kind Two Of A Kind
           Two Of A Kind Two Of A Kind Two Of A Kind Two Of A Kind Two Of A Kind
