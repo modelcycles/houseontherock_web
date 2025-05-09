@@ -27,6 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+        <meta name="theme-color" content="#dfd3c3" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div
           style={{

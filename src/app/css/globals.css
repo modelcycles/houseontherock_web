@@ -22,6 +22,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  background-color: #dfd3c3; /* 상태 표시줄과 동일한 색상 */
+  min-height: 100vh;
+  font-family: var(--font-geist-sans), sans-serif;
 }
 
 * {
