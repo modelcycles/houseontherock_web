@@ -3,6 +3,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
+import "../css/FooterStyle.css";
 
 export function HouseFooter() {
   const [showDialog, setShowDialog] = useState(false);
@@ -80,6 +81,7 @@ function SpeechBubble(props: { showDialog: boolean }) {
   const { showDialog } = props;
   return (
     <div
+      className="font-config"
       style={{
         position: "absolute",
         bottom: "85px", // Position further above the icon
