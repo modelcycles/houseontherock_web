@@ -27,7 +27,7 @@ export function HouseHeader() {
     <>
       <div
         style={{
-          height: "50px",
+          height: "100px",
           background: "#dfd3c3",
           borderBottom: "1px solid black",
           color: "black",
@@ -80,9 +80,17 @@ function PcHeader() {
           <Link href={"/"} prefetch={false}>
             <div
               className="font-config"
-              style={{ fontSize: 30, alignContent: "center" }}
+              style={{
+                fontSize: 30,
+                alignItems: "baseline",
+                alignContent: "center",
+                display: "flex",
+              }}
             >
-              HOUSE ON THE ROCK
+              <p style={{ fontSize: 30, marginRight: "8px" }}>
+                HOUSE ON THE ROCK
+              </p>
+              <p style={{ fontSize: 16 }}>Publisher</p>
             </div>
           </Link>
         </div>
@@ -130,9 +138,16 @@ function TabletHeader() {
           <Link href={"/"} prefetch={false}>
             <div
               className="font-config"
-              style={{ fontSize: 30, alignContent: "center" }}
+              style={{
+                alignItems: "baseline",
+                alignContent: "center",
+                display: "flex",
+              }}
             >
-              HOUSE ON THE ROCK
+              <p style={{ fontSize: 30, marginRight: "8px" }}>
+                HOUSE ON THE ROCK
+              </p>
+              <p style={{ fontSize: 16 }}>Publisher</p>
             </div>
           </Link>
         </div>
@@ -183,7 +198,7 @@ function MobileHeader() {
       >
         <div>
           <Link className="home-button font-config" href={"/"} prefetch={false}>
-            <div>HOUSE ON THE ROCK</div>
+            <p>HOUSE ON THE ROCK</p>
           </Link>
         </div>
         <div style={{ transition: "0.3s" }}>
