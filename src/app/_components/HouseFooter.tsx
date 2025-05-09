@@ -1,8 +1,8 @@
 "use client";
 import { BiLogoGmail } from "react-icons/bi";
-import { FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export function HouseFooter() {
   const [showDialog, setShowDialog] = useState(false);
@@ -32,7 +32,7 @@ export function HouseFooter() {
       >
         <div className="menu-button">
           <Link href="https://www.instagram.com/yongcheol_c/" target="_blank">
-            <img
+            <Image
               src="/instagram_logo.svg"
               alt="instagram"
               width={24}
@@ -45,7 +45,7 @@ export function HouseFooter() {
             href="https://smartstore.naver.com/houseontherock"
             target="_blank"
           >
-            <img
+            <Image
               src="/smartstore_logo.svg"
               alt="smartstore"
               width={24}
