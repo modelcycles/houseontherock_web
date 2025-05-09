@@ -167,6 +167,7 @@ function TabletHeader() {
 }
 function MobileHeader() {
   const [showDialog, setShowDialog] = useState(false);
+  const transparentColor = "rgba(223, 211, 195, 0.7)";
   // const [isMenubutton, setMenubutton] = useState(true);
   // console.log("isMenubutton", isMenubutton);
   return (
@@ -177,6 +178,7 @@ function MobileHeader() {
           justifyContent: "space-between",
           paddingLeft: 20,
           paddingRight: 20,
+          zIndex: 1,
         }}
       >
         <div>
@@ -184,10 +186,11 @@ function MobileHeader() {
             <div>HOUSE ON THE ROCK</div>
           </Link>
         </div>
-        <div>
+        <div style={{ transition: "0.3s" }}>
           <button
             onClick={() => {
               setShowDialog(true);
+              console.log("showDialog", showDialog);
               // setMenubutton(false);
             }}
             style={{
@@ -213,109 +216,126 @@ function MobileHeader() {
               />
             )} */}
           </button>
-          {showDialog && (
+          {/* {showDialog ? ( */}
+          {/* // <div
+            //   style={{
+            //     position: "fixed",
+            //     top: 0,
+            //     left: 0,
+            //     width: "100%",
+            //     height: "100%",
+            //     backgroundColor: transparentColor,
+            //     backdropFilter: "blur(13px)",
+            //     display: "flex",
+            //     justifyContent: "center",
+            //     alignItems: "center",
+            //     zIndex: 1000,
+            //   }}
+            // > */}
+          <BlurringBackground
+            showDialog={showDialog}
+            backgoundColor={transparentColor}
+          >
             <div
               style={{
-                position: "fixed",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                backgroundColor: "rgba(0, 0, 0, 0.3)",
-                backdropFilter: "blur(5px)",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                zIndex: 1000,
+                // background: "white",
+                padding: 40,
+                // marginTop: 20,
+                borderRadius: 10,
+                textAlign: "center",
               }}
             >
-              <div
+              <div style={fadeInStyle}>
+                <Link
+                  className="menu-button font-config"
+                  href={"/publications"}
+                  prefetch={false}
+                  onClick={() => setShowDialog(false)}
+                >
+                  <div style={{ color: showDialog ? "black" : "transparent" }}>
+                    Published Books
+                  </div>
+                </Link>
+              </div>
+              <div style={fadeInStyle}>
+                <Link
+                  className="menu-button font-config"
+                  href={"/about"}
+                  prefetch={false}
+                  onClick={() => setShowDialog(false)}
+                >
+                  <div style={{ color: showDialog ? "black" : "transparent" }}>
+                    About Us
+                  </div>
+                </Link>
+              </div>
+              <div style={fadeInStyle}>
+                <Link
+                  className="menu-button font-config"
+                  href={"/gallery"}
+                  prefetch={false}
+                  onClick={() => setShowDialog(false)}
+                >
+                  <div style={{ color: showDialog ? "black" : "transparent" }}>
+                    Gallery
+                  </div>
+                </Link>
+              </div>
+              <button
+                onClick={() => {
+                  setShowDialog(false);
+                }}
                 style={{
-                  background: "white",
-                  padding: 40,
-                  // marginTop: 20,
-                  borderRadius: 10,
-                  textAlign: "center",
+                  marginTop: 10,
+                  padding: 10,
+                  background: "transparent",
+                  border: "none",
+                  borderRadius: 5,
+                  cursor: "pointer",
                 }}
               >
-                <div>
-                  <Link
-                    className="menu-button font-config"
-                    href={"/publications"}
-                    prefetch={false}
-                    onClick={() => setShowDialog(false)}
-                  >
-                    <div>Published Books</div>
-                  </Link>
-                </div>
-                <div>
-                  <Link
-                    className="menu-button font-config"
-                    href={"/about"}
-                    prefetch={false}
-                    onClick={() => setShowDialog(false)}
-                  >
-                    <div>About Us</div>
-                  </Link>
-                </div>
-                <div>
-                  <Link
-                    className="menu-button font-config"
-                    href={"/gallery"}
-                    prefetch={false}
-                    onClick={() => setShowDialog(false)}
-                  >
-                    <div>Gallery</div>
-                  </Link>
-                </div>
-                <button
-                  onClick={() => {
-                    setShowDialog(false);
-                    // setMenubutton(true);
-                  }}
-                  style={{
-                    marginTop: 10,
-                    // width: "10px",
-                    // height: "10px",
-                    padding: 10,
-                    background: "white",
-                    border: "none",
-                    borderRadius: 5,
-                    cursor: "pointer",
-                  }}
-                >
-                  <IoClose style={{ color: "black" }} size={24} />
-                </button>
-              </div>
+                <IoClose style={{ color: "black" }} size={24} />
+              </button>
             </div>
-          )}
+          </BlurringBackground>
         </div>
-        {/* <div style={{ display: "flex" }}>
-          <Link
-            className="menu-button font-config"
-            href={"/publications"}
-            prefetch={false}
-          >
-            <div>Published Books</div>
-          </Link>
-          <Link
-            className="menu-button font-config"
-            href={"/about"}
-            prefetch={false}
-            // style={{ marginRight: 20, alignContent: "center" }}
-          >
-            <div>About Us</div>
-          </Link>
-          <Link
-            className="menu-button font-config"
-            href={"/gallery"}
-            prefetch={false}
-            // style={{ marginRight: 20, alignContent: "center" }}
-          >
-            <div>Gallery</div>
-          </Link>
-        </div> */}
       </div>
     </>
   );
 }
+
+function BlurringBackground(props: {
+  showDialog: boolean;
+  backgoundColor: string;
+  children?: React.ReactNode;
+}) {
+  const { showDialog, backgoundColor, children } = props;
+  return (
+    <div
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        transition: "0.3s",
+        transform: showDialog ? "scale(1)" : "scale(0.95)",
+        visibility: showDialog ? "visible" : "hidden",
+        backgroundColor: showDialog ? backgoundColor : "transparent",
+        backdropFilter: showDialog ? "blur(13px)" : "blur(0px)",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        zIndex: 1000,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
+const fadeInStyle = {
+  opacity: 1,
+  transform: "translateY(0)",
+  transition: "opacity 0.5s ease, transform 0.5s ease",
+};
