@@ -60,11 +60,13 @@ export function HouseFooter() {
             cursor: "pointer",
             // backgroundColor: "blue",
           }}
-          onClick={() => {
-            handleCopyEmail();
-          }}
         >
-          <BiLogoGmail size={28} /> {/* Larger icon */}
+          <BiLogoGmail
+            size={28}
+            onClick={() => {
+              handleCopyEmail();
+            }}
+          />
           <SpeechBubble showDialog={showDialog} />
         </div>
         {/* <div>Instagram : yongcheol_c</div> */}
