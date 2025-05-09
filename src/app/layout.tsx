@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "House On The Rock Press",
   description: "Photo book publisher for God",
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: "/apple-touch-icon.png" },
 };
 
 export default function RootLayout({
@@ -28,9 +28,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div
           style={{
