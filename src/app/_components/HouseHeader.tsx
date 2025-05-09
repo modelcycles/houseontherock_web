@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import "../css/HeaderStyle.css";
 import { IoClose } from "react-icons/io5";
+import { MouseHovering } from "./MouseHovering";
 
 export function HouseHeader() {
   const isPC = useMediaQuery({
@@ -87,10 +88,20 @@ function PcHeader() {
                 display: "flex",
               }}
             >
-              <p style={{ fontSize: 30, marginRight: "8px" }}>
-                HOUSE ON THE ROCK
-              </p>
-              <p style={{ fontSize: 16 }}>Publisher</p>
+              <span
+                style={{
+                  fontSize: 30,
+                }}
+              >
+                HOUSE ON THE ROCK&nbsp;
+              </span>
+              <span
+                style={{
+                  fontSize: 16,
+                }}
+              >
+                Publisher
+              </span>
             </div>
           </Link>
         </div>
@@ -124,6 +135,7 @@ function PcHeader() {
 }
 
 function TabletHeader() {
+  const [mouseHover, setMouseHover] = useState(false);
   return (
     <>
       <div
@@ -136,18 +148,29 @@ function TabletHeader() {
       >
         <div>
           <Link href={"/"} prefetch={false}>
-            <div
-              className="font-config"
-              style={{
-                alignItems: "baseline",
-                alignContent: "center",
-                display: "flex",
-              }}
-            >
-              <p style={{ fontSize: 30, marginRight: "8px" }}>
-                HOUSE ON THE ROCK
-              </p>
-              <p style={{ fontSize: 16 }}>Publisher</p>
+            <div className="font-config">
+              <MouseHovering
+                style={{
+                  // display: "flex",
+                  alignItems: "baseline",
+                  alignContent: "center",
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: 30,
+                  }}
+                >
+                  HOUSE ON THE ROCK&nbsp;
+                </span>
+                <span
+                  style={{
+                    fontSize: 16,
+                  }}
+                >
+                  Publisher
+                </span>
+              </MouseHovering>
             </div>
           </Link>
         </div>
@@ -157,7 +180,9 @@ function TabletHeader() {
             href={"/publications"}
             prefetch={false}
           >
-            <div>Published Books</div>
+            <MouseHovering>
+              <p>Published Books</p>
+            </MouseHovering>
           </Link>
           <Link
             className="menu-button font-config"
@@ -165,15 +190,19 @@ function TabletHeader() {
             prefetch={false}
             // style={{ marginRight: 20, alignContent: "center" }}
           >
-            <div>About Us</div>
+            <MouseHovering>
+              <p>About Us</p>
+            </MouseHovering>
           </Link>
           <Link
             className="menu-button font-config"
             href={"/gallery"}
             prefetch={false}
-            // style={{ marginRight: 20, alignContent: "center" }}
+            // style={{ marginRight: 20, alignContent: "center" }}ㅡ
           >
-            <div>Gallery</div>
+            <MouseHovering>
+              <p>Gallery</p>
+            </MouseHovering>
           </Link>
         </div>
       </div>
