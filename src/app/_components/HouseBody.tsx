@@ -8,9 +8,10 @@ type Props = {
   children: React.ReactElement;
   background?: string;
   text_color?: string;
+  align: "left" | "center" | "right";
 };
 
-export function HouseBody({ children, background, text_color }: Props) {
+export function HouseBody({ children, background, text_color, align }: Props) {
   // const background = background ?? "#ecae7d";
   // const text_color = text_color ?? "black";
   const [animate, setAnimate] = useState(false);
@@ -28,18 +29,14 @@ export function HouseBody({ children, background, text_color }: Props) {
         style={{
           // height: "100vh",
           padding: "30px",
-          justifyContent: "space-evenly",
+          justifyContent: align,
           display: "flex",
           flex: 1,
           background: background ?? "#dfd3c3",
           color: text_color ?? "black",
         }}
       >
-        <div className={animate ? "fade-in-up" : ""}>
-          <div></div>
-          {children}
-          <div></div>
-        </div>
+        <div className={animate ? "fade-in-up" : ""}>{children}</div>
       </div>
     </>
   );

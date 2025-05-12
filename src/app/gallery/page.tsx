@@ -3,7 +3,7 @@ import "../css/page.css";
 
 export default function Gallery() {
   return (
-    <HouseBody>
+    <HouseBody align="center">
       <div className="main-text-english">
         <p style={{ marginTop: "50px", marginBottom: "5px" }}>
           GalleryGalleryGalleryGalleryGalleryGalleryGalleryGallery
