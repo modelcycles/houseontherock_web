@@ -2,7 +2,7 @@ import { HouseBody } from "../_components/HouseBody";
 
 export default function AboutUs() {
   return (
-    <HouseBody>
+    <HouseBody align="center">
       <div className="main-text-korean">
         <p style={{ marginTop: "50px", marginBottom: 20 }}>
           하우스온더락은 마태복음 7장 25절 말씀을 기반으로 출발한 1인
