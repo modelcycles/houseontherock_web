@@ -59,7 +59,7 @@ function ProductCard({ imageSrc, title }: { imageSrc: string; title: string }) {
         ></div>
         <p
           style={{
-            marginTop: "20px",
+            marginTop: "10px",
             fontSize: "15px",
             fontWeight: "normal",
           }}
