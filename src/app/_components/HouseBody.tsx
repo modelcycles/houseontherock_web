@@ -27,8 +27,11 @@ export function HouseBody({ children, background, text_color, align }: Props) {
     <>
       <div
         style={{
+          width: "100vw",
           // height: "100vh",
           padding: "30px",
+          // paddingLeft: "30px",
+          // paddingRight: "30px",
           justifyContent: align,
           display: "flex",
           flex: 1,
@@ -36,7 +39,9 @@ export function HouseBody({ children, background, text_color, align }: Props) {
           color: text_color ?? "black",
         }}
       >
-        <div className={animate ? "fade-in-up" : ""}>{children}</div>
+        <div className={animate ? "fade-in-up" : ""} style={{ width: "100%" }}>
+          {children}
+        </div>
       </div>
     </>
   );
