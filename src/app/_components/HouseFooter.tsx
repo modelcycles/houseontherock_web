@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import "../css/FooterStyle.css";
+import "../css/page.css";
 
 export function HouseFooter() {
   const [showDialog, setShowDialog] = useState(false);
@@ -81,7 +82,7 @@ function SpeechBubble(props: { showDialog: boolean }) {
   const { showDialog } = props;
   return (
     <div
-      className="font-config"
+      className="main-text-english"
       style={{
         position: "absolute",
         bottom: "85px", // Position further above the icon
