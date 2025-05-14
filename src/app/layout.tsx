@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./css/globals.css";
 import { HouseHeader } from "./_components/HouseHeader";
 import { HouseFooter } from "./_components/HouseFooter";
+import { MediaQueryProvider } from "./_components/MediaQueryContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,9 +43,11 @@ export default function RootLayout({
             minHeight: "100vh",
           }}
         >
-          <HouseHeader />
-          {children}
-          <HouseFooter />
+          <MediaQueryProvider>
+            <HouseHeader />
+            {children}
+            <HouseFooter />
+          </MediaQueryProvider>
         </div>
       </body>
     </html>

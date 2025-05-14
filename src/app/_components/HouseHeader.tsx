@@ -5,17 +5,10 @@ import { useMediaQuery } from "react-responsive";
 import "../css/HeaderStyle.css";
 import { IoClose } from "react-icons/io5";
 import { MouseHovering } from "./MouseHovering";
+import { useMedia } from "./MediaQueryContext";
 
 export function HouseHeader() {
-  const isPC = useMediaQuery({
-    query: "(min-width:1951px)",
-  });
-  const isTablet = useMediaQuery({
-    query: "(min-width:768px) and (max-width:1950px)",
-  });
-  const isMobile = useMediaQuery({
-    query: "(max-width:767px)",
-  });
+  const { isMobile, isTablet, isDesktop } = useMedia();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -35,7 +28,7 @@ export function HouseHeader() {
           alignContent: "center",
         }}
       >
-        {isPC && <PcHeader />}
+        {isDesktop && <DesktopHeader />}
         {isTablet && <TabletHeader />}
         {isMobile && <MobileHeader />}
       </div>
@@ -43,7 +36,7 @@ export function HouseHeader() {
   );
 }
 
-function PcHeader() {
+function DesktopHeader() {
   return (
     <>
       <div
