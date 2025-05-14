@@ -35,29 +35,6 @@ export function HouseHeader() {
           alignContent: "center",
         }}
       >
-        {/* 가나다라 */}
-        {/* <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            paddingLeft: 20,
-            paddingRight: 20,
-          }}
-          onClick={() => {
-            console.log("is it PC? :", isPC);
-          }}
-        >
-          <div>
-            <Link href={"/"} prefetch={false}>
-              <div
-                className="font-config"
-                style={{ fontSize: 30, alignContent: "center" }}
-              >
-                HOUSE ON THE ROCK
-              </div>
-            </Link>
-          </div>
-        </div> */}
         {isPC && <PcHeader />}
         {isTablet && <TabletHeader />}
         {isMobile && <MobileHeader />}
@@ -80,7 +57,7 @@ function PcHeader() {
         <div>
           <Link href={"/"} prefetch={false}>
             <div
-              className="font-config"
+              className="main-text-english"
               style={{
                 fontSize: 30,
                 alignItems: "baseline",
@@ -108,21 +85,21 @@ function PcHeader() {
         <div id="spacer" />
         <div style={{ display: "flex" }}>
           <Link
-            className="menu-button font-config"
+            className="menu-button main-text-english"
             href={"/publications"}
             prefetch={false}
           >
             <div>Published Books</div>
           </Link>
           <Link
-            className="menu-button font-config"
+            className="menu-button main-text-english"
             href={"/about"}
             prefetch={false}
           >
             <div>About Us</div>
           </Link>
           <Link
-            className="menu-button font-config"
+            className="menu-button main-text-english"
             href={"/gallery"}
             prefetch={false}
           >
@@ -147,7 +124,7 @@ function TabletHeader() {
       >
         <div>
           <Link href={"/"} prefetch={false}>
-            <div className="font-config">
+            <div className="main-text-english">
               <MouseHovering
                 style={{
                   // display: "flex",
@@ -175,7 +152,7 @@ function TabletHeader() {
         </div>
         <div style={{ display: "flex" }}>
           <Link
-            className="menu-button font-config"
+            className="menu-button main-text-english"
             href={"/publications"}
             prefetch={false}
           >
@@ -184,7 +161,7 @@ function TabletHeader() {
             </MouseHovering>
           </Link>
           <Link
-            className="menu-button font-config"
+            className="menu-button main-text-english"
             href={"/about"}
             prefetch={false}
             // style={{ marginRight: 20, alignContent: "center" }}
@@ -194,7 +171,7 @@ function TabletHeader() {
             </MouseHovering>
           </Link>
           <Link
-            className="menu-button font-config"
+            className="menu-button main-text-english"
             href={"/gallery"}
             prefetch={false}
             // style={{ marginRight: 20, alignContent: "center" }}ㅡ
@@ -208,6 +185,7 @@ function TabletHeader() {
     </>
   );
 }
+
 function MobileHeader() {
   const [showDialog, setShowDialog] = useState(false);
   const transparentColor = "rgba(223, 211, 195, 0.7)";
@@ -225,7 +203,11 @@ function MobileHeader() {
         }}
       >
         <div>
-          <Link className="home-button font-config" href={"/"} prefetch={false}>
+          <Link
+            className="home-button main-text-english"
+            href={"/"}
+            prefetch={false}
+          >
             <p>HOUSE ON THE ROCK</p>
           </Link>
         </div>
@@ -246,35 +228,7 @@ function MobileHeader() {
             }}
           >
             <div style={{ fontSize: 24 }}>☰</div>
-            {/* {isMenubutton ? (
-              <div style={{ fontSize: 24 }}>☰</div>
-            ) : (
-              <IoClose
-                style={{ color: "black" }}
-                size={24}
-                onClick={() => {
-                  setShowDialog(false);
-                  setMenubutton(true);
-                }}
-              />
-            )} */}
           </button>
-          {/* {showDialog ? ( */}
-          {/* // <div
-            //   style={{
-            //     position: "fixed",
-            //     top: 0,
-            //     left: 0,
-            //     width: "100%",
-            //     height: "100%",
-            //     backgroundColor: transparentColor,
-            //     backdropFilter: "blur(13px)",
-            //     display: "flex",
-            //     justifyContent: "center",
-            //     alignItems: "center",
-            //     zIndex: 1000,
-            //   }}
-            // > */}
           <BlurringBackground
             showDialog={showDialog}
             backgoundColor={transparentColor}
@@ -290,7 +244,7 @@ function MobileHeader() {
             >
               <div style={fadeInStyle}>
                 <Link
-                  className="menu-button font-config"
+                  className="menu-button main-text-english"
                   href={"/publications"}
                   prefetch={false}
                   onClick={() => setShowDialog(false)}
@@ -302,7 +256,7 @@ function MobileHeader() {
               </div>
               <div style={fadeInStyle}>
                 <Link
-                  className="menu-button font-config"
+                  className="menu-button main-text-english"
                   href={"/about"}
                   prefetch={false}
                   onClick={() => setShowDialog(false)}
@@ -314,7 +268,7 @@ function MobileHeader() {
               </div>
               <div style={fadeInStyle}>
                 <Link
-                  className="menu-button font-config"
+                  className="menu-button main-text-english"
                   href={"/gallery"}
                   prefetch={false}
                   onClick={() => setShowDialog(false)}
