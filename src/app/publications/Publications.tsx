@@ -8,7 +8,7 @@ export function PublishedBooks() {
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
     setIsClient(true);
-  });
+  }, []);
 
   const { isDesktop, isMobile, isTablet } = useMedia();
 

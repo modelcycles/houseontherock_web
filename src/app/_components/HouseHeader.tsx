@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { useMediaQuery } from "react-responsive";
 import "../css/HeaderStyle.css";
 import { IoClose } from "react-icons/io5";
 import { MouseHovering } from "./MouseHovering";
