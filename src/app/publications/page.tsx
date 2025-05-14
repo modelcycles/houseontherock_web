@@ -27,7 +27,7 @@ export default function PublishedBooks() {
         </p>
         <div style={{ width: "100%", justifyItems: "center" }}>
           <ProductCard
-            imageSrc="/two_of_a_kind.jpg"
+            imageSrc="/book_images/two_of_a_kind/thumbnail/two_of_a_kind_cover.jpg"
             title={"Two Of A Kind | by Yongcheol Cho"}
           ></ProductCard>
         </div>
