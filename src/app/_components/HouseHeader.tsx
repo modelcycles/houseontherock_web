@@ -171,7 +171,7 @@ function TabletHeader() {
             className="menu-button main-text-english"
             href={"/gallery"}
             prefetch={false}
-            style={{ margin: 0 }}
+            style={{ marginRight: 0 }}
           >
             <MouseHovering>
               <p>Gallery</p>
