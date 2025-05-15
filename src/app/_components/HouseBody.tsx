@@ -27,7 +27,7 @@ export function HouseBody({ children, background, text_color, align }: Props) {
     <>
       <div
         style={{
-          width: "100vw",
+          width: "100%",
           // height: "100vh",
           padding: "30px",
           // paddingLeft: "30px",
