@@ -86,17 +86,17 @@ function TabletPublishedBooks() {
         <div
           style={{
             // background: "black",
-            width: "767px",
+            width: "100%",
             display: "flex",
             flexDirection: "row",
-            // justifyContent: "center",
+            justifyContent: "center",
           }}
         >
           <ProductCard
             imageSrc="/book_images/two_of_a_kind/thumbnail/two_of_a_kind_cover.jpg"
             title={"Two Of A Kind | by Yongcheol Cho"}
             size={"400px"}
-            style={{ margin: "30px" }}
+            style={{ marginRight: "100px", marginBottom: "50px" }}
           ></ProductCard>
         </div>
       </div>
