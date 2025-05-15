@@ -1,4 +1,4 @@
-import { HouseBody } from "./app/_components/HouseBody";
+import { HouseBody } from "./_components/HouseBody";
 
 export function LandingPage() {
   return (
