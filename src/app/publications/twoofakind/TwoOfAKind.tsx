@@ -80,11 +80,12 @@ export function DesktopTwoOfAKind() {
               marginRight: "45px",
             }}
           >
-            <img
+            <ImageCarousel images={images} />
+            {/* <img
               src="/book_images/two_of_a_kind/thumbnail/two_of_a_kind_cover.jpg"
               alt="Two Of A Kind"
               style={{ width: "100%", height: "auto" }}
-            />
+            /> */}
           </div>
           <InfoText />
         </div>
