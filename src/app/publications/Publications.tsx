@@ -33,7 +33,8 @@ function DesktopPublishedBooks() {
           fontSize: 70,
           textAlign: "left",
           // background: "#f5ede4",
-          display: "block",
+          display: "flex",
+          flexDirection: "column",
         }}
       >
         <p
@@ -59,7 +60,7 @@ function DesktopPublishedBooks() {
 
 function TabletPublishedBooks() {
   return (
-    <HouseBody align="center">
+    <HouseBody align="left">
       <div
         className="main-text-english"
         style={{
@@ -67,7 +68,8 @@ function TabletPublishedBooks() {
           fontSize: 70,
           textAlign: "left",
           // background: "#f5ede4",
-          display: "block",
+          display: "flex",
+          flexDirection: "column",
         }}
       >
         <p
@@ -106,18 +108,24 @@ function MobilePublishedBooks() {
       >
         <p
           style={{
-            marginBottom: "75px",
+            marginBottom: "60px",
             width: "100%",
             borderBottom: "1px solid black",
           }}
         >
           Publications
         </p>
-        <div style={{ width: "100%", justifyItems: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "center",
+          }}
+        >
           <ProductCard
             imageSrc="/book_images/two_of_a_kind/thumbnail/two_of_a_kind_cover.jpg"
             title={"Two Of A Kind | by Yongcheol Cho"}
-            size={"55%"}
+            size={"80%"}
           ></ProductCard>
         </div>
       </div>
@@ -140,6 +148,7 @@ function ProductCard({
         width: size ? size : "400px",
         textAlign: "left",
         // padding: "25px",
+        // background: "black",
         // border: "1px solid black",
       }}
     >
