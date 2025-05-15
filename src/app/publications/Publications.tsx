@@ -25,11 +25,11 @@ export function PublishedBooks() {
 
 function DesktopPublishedBooks() {
   return (
-    <HouseBody align="left">
+    <HouseBody align="center">
       <div
         className="main-text-english"
         style={{
-          width: "100%",
+          width: "60%",
           fontSize: 70,
           textAlign: "left",
           // background: "#f5ede4",
@@ -70,6 +70,8 @@ function TabletPublishedBooks() {
           // background: "#f5ede4",
           display: "flex",
           flexDirection: "column",
+          // justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <p
@@ -81,11 +83,20 @@ function TabletPublishedBooks() {
         >
           Publications
         </p>
-        <div style={{ width: "100%", justifyItems: "center" }}>
+        <div
+          style={{
+            // background: "black",
+            width: "767px",
+            display: "flex",
+            flexDirection: "row",
+            // justifyContent: "center",
+          }}
+        >
           <ProductCard
             imageSrc="/book_images/two_of_a_kind/thumbnail/two_of_a_kind_cover.jpg"
             title={"Two Of A Kind | by Yongcheol Cho"}
             size={"400px"}
+            style={{ margin: "30px" }}
           ></ProductCard>
         </div>
       </div>
@@ -137,10 +148,12 @@ function ProductCard({
   imageSrc,
   title,
   size,
+  style,
 }: {
   imageSrc: string;
   title: string;
   size?: string;
+  style?: React.CSSProperties;
 }) {
   return (
     <div
@@ -150,6 +163,7 @@ function ProductCard({
         // padding: "25px",
         // background: "black",
         // border: "1px solid black",
+        ...style,
       }}
     >
       <Link href="/publications/twoofakind">
