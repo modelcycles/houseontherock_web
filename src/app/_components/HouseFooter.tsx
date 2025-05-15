@@ -3,7 +3,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-import "../css/FooterStyle.css";
+import "../css/HeaderStyle.css";
 import "../css/page.css";
 
 export function HouseFooter() {
@@ -24,6 +24,7 @@ export function HouseFooter() {
     <>
       <div
         style={{
+          width: "100%",
           height: "100px",
           background: "#dfd3c3",
           color: "black",
@@ -71,9 +72,9 @@ export function HouseFooter() {
           />
           <SpeechBubble showDialog={showDialog} />
         </div>
-        {/* <div>Instagram : yongcheol_c</div> */}
-        {/* <div>e-mail : houseontherock2025@gmail.com</div> */}
       </div>
+      {/* <div>Instagram : yongcheol_c</div> */}
+      {/* <div>e-mail : houseontherock2025@gmail.com</div> */}
     </>
   );
 }
