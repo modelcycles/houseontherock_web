@@ -42,8 +42,8 @@ function DesktopHeader() {
         style={{
           display: "flex",
           justifyContent: "space-evenly",
-          paddingLeft: 20,
-          paddingRight: 20,
+          paddingLeft: 30,
+          paddingRight: 30,
         }}
       >
         <div>
@@ -94,6 +94,7 @@ function DesktopHeader() {
             className="menu-button main-text-english"
             href={"/gallery"}
             prefetch={false}
+            style={{ margin: 0 }}
           >
             <div>Gallery</div>
           </Link>
@@ -111,7 +112,7 @@ function TabletHeader() {
           display: "flex",
           justifyContent: "space-between",
           paddingLeft: 30,
-          paddingRight: 20,
+          paddingRight: 30,
         }}
       >
         <div>
@@ -142,7 +143,11 @@ function TabletHeader() {
             </div>
           </Link>
         </div>
-        <div style={{ display: "flex" }}>
+        <div
+          style={{
+            display: "flex",
+          }}
+        >
           <Link
             className="menu-button main-text-english"
             href={"/publications"}
@@ -166,7 +171,7 @@ function TabletHeader() {
             className="menu-button main-text-english"
             href={"/gallery"}
             prefetch={false}
-            // style={{ marginRight: 20, alignContent: "center" }}ㅡ
+            style={{ margin: 0 }}
           >
             <MouseHovering>
               <p>Gallery</p>
