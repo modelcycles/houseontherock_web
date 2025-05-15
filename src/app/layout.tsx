@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./css/globals.css";
+import "./css/customScrollBar.css";
 import { HouseHeader } from "./_components/HouseHeader";
 import { HouseFooter } from "./_components/HouseFooter";
 import { MediaQueryProvider } from "./_components/MediaQueryContext";
