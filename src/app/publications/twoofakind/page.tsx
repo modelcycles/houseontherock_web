@@ -1,5 +1,4 @@
-import { HouseBody } from "@/app/_components/HouseBody";
-import "../../css/page.css";
+"use client";
 import { TwoOfAKind } from "./TwoOfAKind";
 
 export default function BodyWrapTwoOfAKind() {
