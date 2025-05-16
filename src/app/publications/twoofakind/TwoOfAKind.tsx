@@ -1,6 +1,6 @@
 import { HouseBody } from "@/app/_components/HouseBody";
 import "../../css/page.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMedia } from "@/app/_components/MediaQueryContext";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
@@ -534,28 +534,69 @@ function InfoText() {
 
 function ImageCarousel({ images }: { images: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const thumbnailContainerRef = useRef<HTMLDivElement>(null);
 
   const handleThumbnailClick = (index: number) => {
     setCurrentIndex(index);
   };
 
-  const handleNext = () => {
+  const handleNext = (e: React.MouseEvent) => {
+    e.preventDefault();
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  const handlePrev = () => {
+  const handlePrev = (e: React.MouseEvent) => {
+    e.preventDefault();
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
+  useEffect(() => {
+    if (thumbnailContainerRef.current) {
+      const selectedThumbnail = thumbnailContainerRef.current.children[
+        currentIndex
+      ] as HTMLElement;
+      if (selectedThumbnail) {
+        selectedThumbnail.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+      }
+    }
+  }, [currentIndex]);
+
+  // useEffect(() => {
+  //   const preventBodyScroll = (e: WheelEvent) => {
+  //     if (
+  //       thumbnailContainerRef.current &&
+  //       thumbnailContainerRef.current.contains(e.target as Node)
+  //     ) {
+  //       e.stopPropagation();
+  //     }
+  //   };
+
+  //   document.body.addEventListener("wheel", preventBodyScroll, {
+  //     passive: false,
+  //   });
+  //   return () => {
+  //     document.body.removeEventListener("wheel", preventBodyScroll);
+  //   };
+  // }, []);
+
   return (
-    <div style={{ textAlign: "center" }}>
-      <div style={{ position: "relative", marginBottom: "20px" }}>
+    <div style={{ width: "100%", textAlign: "center" }}>
+      <div
+        style={{
+          position: "relative",
+          marginBottom: "20px",
+        }}
+      >
         <img
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
-          style={{ width: "100%", maxHeight: "500px", objectFit: "contain" }}
+          style={{ width: "100%", objectFit: "contain" }}
         />
         <button
           onClick={handlePrev}
@@ -577,7 +618,6 @@ function ImageCarousel({ images }: { images: string[] }) {
           }}
         >
           <IoIosArrowBack size={"20px"} />
-          {/* &#8249; */}
         </button>
         <button
           onClick={handleNext}
@@ -599,10 +639,20 @@ function ImageCarousel({ images }: { images: string[] }) {
           }}
         >
           <IoIosArrowForward size={"20px"} />
-          {/* &#8250; */}
         </button>
       </div>
-      <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+      <div
+        ref={thumbnailContainerRef}
+        style={{
+          display: "flex",
+          justifyContent: "flex-start",
+          gap: "10px",
+          overflowX: "auto",
+          overflowY: "hidden",
+          whiteSpace: "nowrap",
+          paddingBottom: "10px",
+        }}
+      >
         {images.map((image, index) => (
           <img
             key={index}
@@ -615,6 +665,7 @@ function ImageCarousel({ images }: { images: string[] }) {
               objectFit: "cover",
               cursor: "pointer",
               border: currentIndex === index ? "2px solid black" : "none",
+              flexShrink: 0,
             }}
           />
         ))}
@@ -626,7 +677,11 @@ function ImageCarousel({ images }: { images: string[] }) {
 // Example usage
 const images = [
   "/book_images/two_of_a_kind/thumbnail/two_of_a_kind_cover.jpg",
-  "/book_images/two_of_a_kind/thumbnail/house on the rock copy 2.jpg",
-  "/book_images/two_of_a_kind/thumbnail/house on the rock copy.jpg",
-  "/book_images/two_of_a_kind/thumbnail/house on the rock.jpg",
+  "/book_images/two_of_a_kind/sample_images/0101.jpg",
+  "/book_images/two_of_a_kind/sample_images/0201.jpg",
+  "/book_images/two_of_a_kind/sample_images/0301.jpg",
+  "/book_images/two_of_a_kind/sample_images/0401.jpg",
+  "/book_images/two_of_a_kind/sample_images/0501.jpg",
+  "/book_images/two_of_a_kind/sample_images/0601.jpg",
+  "/book_images/two_of_a_kind/sample_images/0701.jpg",
 ];

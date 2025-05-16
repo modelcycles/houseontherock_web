@@ -3,6 +3,7 @@ import { HouseBody } from "../_components/HouseBody";
 import { useMedia } from "../_components/MediaQueryContext";
 import "../css/page.css";
 import { useEffect, useState } from "react";
+import { MouseHovering } from "../_components/MouseHovering";
 
 export function PublishedBooks() {
   const [isClient, setIsClient] = useState(false);
@@ -166,27 +167,47 @@ function ProductCard({
         ...style,
       }}
     >
-      <Link href="/publications/twoofakind">
-        <div
-          style={{
-            width: "100%",
-            paddingTop: "100%",
-            backgroundImage: `url(${imageSrc})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            borderRadius: "4px",
-          }}
-        ></div>
-        <p
-          style={{
-            marginTop: "10px",
-            fontSize: "15px",
-            fontWeight: "normal",
-          }}
-        >
-          {title}
-        </p>
-      </Link>
+      <MouseHovering>
+        <Link href="/publications/twoofakind">
+          <div
+            style={{
+              width: "100%",
+              paddingTop: "100%",
+              backgroundImage: `url(${imageSrc})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              borderRadius: "4px",
+            }}
+          />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+            }}
+          >
+            <p
+              style={{
+                marginTop: "10px",
+                fontSize: "15px",
+                fontWeight: "normal",
+              }}
+            >
+              {title}
+            </p>
+            {/* <p
+              // className="main-text-korean"
+              style={{
+                marginTop: "10px",
+                fontSize: "15px",
+                fontWeight: "normal",
+              }}
+            >
+              {">"}
+            </p> */}
+          </div>
+        </Link>
+      </MouseHovering>
     </div>
   );
 }
