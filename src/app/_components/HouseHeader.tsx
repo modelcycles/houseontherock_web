@@ -90,14 +90,14 @@ function DesktopHeader() {
           >
             <div>About Us</div>
           </Link>
-          <Link
+          {/* <Link
             className="menu-button main-text-english"
             href={"/gallery"}
             prefetch={false}
             style={{ margin: 0 }}
           >
             <div>Gallery</div>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </>
@@ -167,7 +167,7 @@ function TabletHeader() {
               <p>About Us</p>
             </MouseHovering>
           </Link>
-          <Link
+          {/* <Link
             className="menu-button main-text-english"
             href={"/gallery"}
             prefetch={false}
@@ -176,7 +176,7 @@ function TabletHeader() {
             <MouseHovering>
               <p>Gallery</p>
             </MouseHovering>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </>
@@ -263,7 +263,7 @@ function MobileHeader() {
                   </div>
                 </Link>
               </div>
-              <div style={fadeInStyle}>
+              {/* <div style={fadeInStyle}>
                 <Link
                   className="menu-button main-text-english"
                   href={"/gallery"}
@@ -274,7 +274,7 @@ function MobileHeader() {
                     Gallery
                   </div>
                 </Link>
-              </div>
+              </div> */}
               <button
                 onClick={() => {
                   setShowDialog(false);

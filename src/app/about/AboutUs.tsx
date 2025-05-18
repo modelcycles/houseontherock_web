@@ -8,7 +8,7 @@ export function AboutUs() {
     setIsClient(true);
   }, []);
 
-  const { isDesktop, isTablet } = useMedia();
+  const { isDesktop, isMobile, isTablet } = useMedia();
   if (!isClient) return null;
   return (
     <HouseBody align="center">
@@ -35,17 +35,22 @@ export function AboutUs() {
         <div
           style={{
             width: "100%",
-            height: "100%",
+            // height: "100%",
             display: "flex",
-            flexDirection: "row",
-            justifyContent: isDesktop || isTablet ? "left" : "center",
-            alignContent: "center",
-            // background: "white",
+            flexDirection: isDesktop || isTablet ? "row" : "column",
+            // justifyItems: "center",
+            justifyContent: "left",
+            // alignContent: "space-between",
+            alignItems: isDesktop || isTablet ? "baseline" : "center",
           }}
         >
           <div
             className="main-text-korean"
-            style={{ maxWidth: "430px", textAlign: "justify" }}
+            style={{
+              maxWidth: "430px",
+              textAlign: "justify",
+              marginRight: isDesktop || isTablet ? 40 : 0,
+            }}
           >
             <p
               style={{
@@ -81,7 +86,28 @@ export function AboutUs() {
               견고한 터 위에 집을 지어 완공하는 날까지 하우스온더락은 계속
               나아가겠습니다.
             </p>
+            <p
+              style={{ marginBottom: 20, textAlign: "right", fontWeight: 400 }}
+            >
+              설립자 조용철
+            </p>
           </div>
+          {/* <div
+            className="main-text-korean"
+            style={{
+              width: "100%",
+              maxWidth: "430px",
+              textAlign: "justify",
+              marginTop: 50,
+            }}
+          >
+            <p style={{ marginBottom: 20 }}>조용철</p>
+            <p style={{ marginBottom: 20 }}>
+              조용철은 한국예술종합학교 작곡과를 졸업하였으며 황성호 김성기 배동진에게 사사하였다. 제 11회 세일 한국가곡 콩쿠르
+              작곡부문 3위, 제2회 두남재 콩쿠르 2023년 한국가곡 대축제 in 당진
+              한국가곡 콩쿠르 금상
+            </p>
+          </div> */}
           {/* <img
             style={{ width: "50%", maxWidth: "700px", padding: 30 }}
             src="/about_us.jpg"
