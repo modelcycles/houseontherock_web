@@ -8,7 +8,7 @@ export function AboutUs() {
     setIsClient(true);
   }, []);
 
-  const { isDesktop, isMobile, isTablet } = useMedia();
+  const { isDesktop, isTablet } = useMedia();
   if (!isClient) return null;
   return (
     <HouseBody align="center">
