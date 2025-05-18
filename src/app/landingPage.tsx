@@ -25,7 +25,7 @@ function DesktopLandingPage() {
                 marginBottom: 20,
                 // zIndex: 0,
               }}
-            ></img>
+            />
             <div
               className="main-text-korean"
               style={{
