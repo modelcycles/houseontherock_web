@@ -81,6 +81,7 @@ export function DesktopTwoOfAKind() {
             }}
           >
             <ImageCarousel images={images} />
+            <PerchaseButton url="https://smartstore.naver.com/houseontherock/products/11856435620" />
             {/* <img
               src="/book_images/two_of_a_kind/thumbnail/two_of_a_kind_cover.jpg"
               alt="Two Of A Kind"
@@ -161,6 +162,7 @@ export function TabletTwoOfAKind() {
             }}
           >
             <ImageCarousel images={images} />
+            <PerchaseButton url="https://smartstore.naver.com/houseontherock/products/11856435620" />
             {/* <img
               src="/book_images/two_of_a_kind/thumbnail/two_of_a_kind_cover.jpg"
               alt="Two Of A Kind"
@@ -240,6 +242,7 @@ export function MobileTwoOfAKind() {
           }}
         >
           <ImageCarousel images={images} />
+          <PerchaseButton url="https://smartstore.naver.com/houseontherock/products/11856435620" />
           {/* <img
             src="/book_images/two_of_a_kind/thumbnail/two_of_a_kind_cover.jpg"
             alt="Two Of A Kind"
@@ -557,6 +560,50 @@ function ImageCarousel({ images }: { images: string[] }) {
           />
         ))}
       </div>
+    </div>
+  );
+}
+
+function PerchaseButton(props: { url: string }) {
+  const [isMouseIn, setIsMouseIn] = useState(false);
+  const { url } = props;
+  return (
+    <div
+      className="main-text-korean"
+      style={{
+        marginTop: "20px",
+        width: "100%",
+        height: 52,
+        fontSize: "16px",
+        textAlign: "center",
+        cursor: "pointer",
+        alignContent: "center",
+        borderRadius: "4px",
+        background: isMouseIn ? "#cbbca8" : "#b6a189",
+        color: "white",
+        transition: "0.2s",
+      }}
+      onMouseEnter={() => {
+        setIsMouseIn(true);
+        // (e.target as HTMLButtonElement).style.background = "#cbbca8";
+        // (e.target as HTMLButtonElement).style.color = "black";
+      }}
+      onMouseLeave={() => {
+        setIsMouseIn(false);
+        // (e.target as HTMLButtonElement).style.background = "#b6a189";
+        // (e.target as HTMLButtonElement).style.color = "white";
+      }}
+      onClick={() => {
+        window.open(url);
+      }}
+    >
+      {/* <Link
+        href={url}
+        target="_blank"
+        style={{ width: "100%", height: "100%" }}
+      >
+      </Link> */}
+      스마트스토어로 이동하기
     </div>
   );
 }
