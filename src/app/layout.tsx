@@ -30,9 +30,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="title" content="House On The Rock - Photobook Publisher" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="description"
+          content="사진 책으로 빛을 전하는 출판사 하우스온더락입니다."
+        />
         <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
+        />
+        <meta
+          name="keywords"
+          content="Photobook, Independent Publisher, 사진책, 독립출판사"
         />
         <meta name="theme-color" content="#dfd3c3" />
       </head>
