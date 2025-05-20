@@ -45,6 +45,10 @@ export default function RootLayout({
           content="Photobook, Independent Publisher, 사진책, 독립출판사"
         />
         <meta name="theme-color" content="#dfd3c3" />
+        <meta
+          name="google-site-verification"
+          content="FojmBkNyAdne9uZ3x3mpQjEqnhsKCwBi0uD2coAKEAs"
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div
