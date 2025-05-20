@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>House On The Rock - Photobook Publisher</title>
+  <link>https://houseontherockpress.com</link>
+  <description>사진 책으로 빛을 전하는 출판사 하우스온더락입니다.</description>
+  <item>
+    <title>Published Books</title>
+    <link>https://houseontherockpress.com/publications</link>
+    <description>하우스온더락에 출간된 책</description>
+  </item>
+  <!-- Additional item elements here -->
+</channel>
+</rss>
