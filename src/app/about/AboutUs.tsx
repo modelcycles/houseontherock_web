@@ -15,7 +15,7 @@ export function AboutUs() {
       <div
         className="main-text-english"
         style={{
-          width: "100%",
+          width: isDesktop ? "60%" : "100%",
           textAlign: "left",
           // background: "#f5ede4",
           display: "flex",
