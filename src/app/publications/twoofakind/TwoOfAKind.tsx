@@ -579,7 +579,7 @@ function PerchaseButton(props: { url: string }) {
         cursor: "pointer",
         alignContent: "center",
         borderRadius: "4px",
-        background: isMouseIn ? "#cbbca8" : "#b6a189",
+        background: isMouseIn ? "#03DB63" : "#03C75A",
         color: "white",
         transition: "0.2s",
       }}
