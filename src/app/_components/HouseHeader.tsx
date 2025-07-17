@@ -57,20 +57,22 @@ function DesktopHeader() {
                 display: "flex",
               }}
             >
-              <span
-                style={{
-                  fontSize: 30,
-                }}
-              >
-                HOUSE ON THE ROCK&nbsp;
-              </span>
-              <span
-                style={{
-                  fontSize: 16,
-                }}
-              >
-                Publisher
-              </span>
+              <MouseHovering>
+                <span
+                  style={{
+                    fontSize: 30,
+                  }}
+                >
+                  HOUSE ON THE ROCK&nbsp;
+                </span>
+                <span
+                  style={{
+                    fontSize: 16,
+                  }}
+                >
+                  Publisher
+                </span>
+              </MouseHovering>
             </div>
           </Link>
         </div>
@@ -81,14 +83,18 @@ function DesktopHeader() {
             href={"/publications"}
             prefetch={false}
           >
-            <div>Published Books</div>
+            <MouseHovering>
+              <p>Published Books</p>
+            </MouseHovering>
           </Link>
           <Link
             className="menu-button main-text-english"
             href={"/about"}
             prefetch={false}
           >
-            <div>About Us</div>
+            <MouseHovering>
+              <p>About Us</p>
+            </MouseHovering>
           </Link>
           {/* <Link
             className="menu-button main-text-english"
@@ -205,7 +211,9 @@ function MobileHeader() {
             href={"/"}
             prefetch={false}
           >
-            <p>HOUSE ON THE ROCK</p>
+            <MouseHovering>
+              <p>HOUSE ON THE ROCK</p>
+            </MouseHovering>
           </Link>
         </div>
         <div style={{ transition: "0.3s" }}>
@@ -224,7 +232,9 @@ function MobileHeader() {
               backgroundColor: "#dfd3c3",
             }}
           >
-            <div style={{ fontSize: 24 }}>☰</div>
+            <MouseHovering>
+              <div style={{ fontSize: 24 }}>☰</div>
+            </MouseHovering>
           </button>
           <BlurringBackground
             showDialog={showDialog}
@@ -246,9 +256,9 @@ function MobileHeader() {
                   prefetch={false}
                   onClick={() => setShowDialog(false)}
                 >
-                  <div style={{ color: showDialog ? "black" : "transparent" }}>
+                  <p style={{ color: showDialog ? "black" : "transparent" }}>
                     Published Books
-                  </div>
+                  </p>
                 </Link>
               </div>
               <div style={fadeInStyle}>
